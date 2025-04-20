@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ChatMate</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ChatMate <span class="version">v1.1.0</span></h1>
+            <div class="theme-toggle">
+                <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox">
+                <label for="dark-mode-toggle" class="toggle-label">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                    <span class="toggle-ball"></span>
+                </label>
+            </div>
+            <p class="tagline">AI Chat Assistant for Instagram & Facebook</p>
+        </div>
+
+        <div id="status-message" class="status-message" style="display: none;"></div>
+
+        <div class="tab-container">
+            <div class="tabs">
+                <button class="tab-button active" data-tab="settings">
+                    <i class="fas fa-cog"></i> Settings
+                </button>
+                <button class="tab-button" data-tab="templates">
+                    <i class="fas fa-file-alt"></i> Templates
+                </button>
+                <button class="tab-button" data-tab="history">
+                    <i class="fas fa-history"></i> History
+                </button>
+            </div>
+
+            <div class="tab-content">
+                <!-- Settings Tab -->
+                <div class="tab-pane active" id="settings-tab">
+                    <div class="setting-group">
+                        <label for="api-key-input">Gemini API Key:</label>
+                        <div class="input-with-button">
+                            <input type="password" id="api-key-input" placeholder="Enter your Gemini API key">
+                            <button id="api-key-save">
+                                <i class="fas fa-save"></i> Save
+                            </button>
+                        </div>
+                        <p class="hint">Get your key from <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a></p>
+                    </div>
+
+                    <div class="setting-group">
+                        <label for="conversation-mode">Conversation Mode:</label>
+                        <select id="conversation-mode">
+                            <option value="casual">Casual Chat</option>
+                            <option value="flirting">Flirty</option>
+                            <option value="funny">Funny</option>
+                            <option value="professional">Professional</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-group">
+                        <label for="tone">Tone:</label>
+                        <select id="tone">
+                            <option value="friendly">Friendly</option>
+                            <option value="sarcastic">Sarcastic</option>
+                            <option value="formal">Formal</option>
+                            <option value="jovial">Jovial</option>
+                            <option value="flirty">Flirty</option>
+                        </select>
+                    </div>
+
+                    <div class="chat-section">
+                        <h3>Response Generator</h3>
+                        <p class="hint">Generate responses and they'll be inserted in your message input field</p>
+                        <textarea id="message-input" placeholder="Type or paste the message you're responding to..."></textarea>
+                        <button id="generate-btn">
+                            <i class="fas fa-bolt"></i> Generate Response
+                        </button>
+                        <div id="response-container" class="hidden">
+                            <!-- Response options will be generated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Templates Tab -->
+                <div class="tab-pane" id="templates-tab">
+                    <div class="templates-header">
+                        <h3>Response Templates</h3>
+                        <button id="add-template-btn">
+                            <i class="fas fa-plus"></i> Add New
+                        </button>
+                    </div>
+
+                    <div class="templates-list" id="templates-list">
+                        <!-- Templates will be loaded here -->
+                    </div>
+
+                    <div id="template-form" class="hidden">
+                        <h4>Create Template</h4>
+                        <input type="text" id="template-name" placeholder="Template name">
+                        <textarea id="template-content" placeholder="Template content..."></textarea>
+                        <div class="button-group">
+                            <button id="save-template-btn">
+                                <i class="fas fa-save"></i> Save
+                            </button>
+                            <button id="cancel-template-btn">
+                                <i class="fas fa-times"></i> Cancel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- History Tab -->
+                <div class="tab-pane" id="history-tab">
+                    <div class="history-header">
+                        <h3>Chat History</h3>
+                        <div class="history-search">
+                            <input type="text" id="history-search" placeholder="Search conversations...">
+                            <button id="history-search-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="conversation-list" id="conversation-list">
+                        <!-- Conversation threads will be loaded here -->
+                    </div>
+
+                    <div id="conversation-detail" class="hidden">
+                        <div class="conversation-header">
+                            <button id="back-to-list-btn">
+                                <i class="fas fa-arrow-left"></i>
+                            </button>
+                            <h4 id="conversation-title">Conversation</h4>
+                        </div>
+                        <div class="messages" id="conversation-messages">
+                            <!-- Messages will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>ChatMate v1.1.0 - Made with ❤️ for Hinglish</p>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
