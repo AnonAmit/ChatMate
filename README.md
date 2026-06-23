@@ -27,23 +27,20 @@ ChatMate uses Google's Gemini API to generate intelligent responses:
 
 ### Local Development Installation
 
-1. Clone this repository:
-```
-git clone https://github.com/yourusername/chatmate.git
-cd chatmate
-```
+1. Download and Extract Extension code
+click here --> [Release](https://github.com/AnonAmit/ChatMate/releases/download/v1.3/ChatMate-v1.3.zip)
 
-2. Load the extension in Chrome:
+3. Load the extension in Chrome:
    - Open Chrome and navigate to `chrome://extensions/`
    - Enable "Developer mode" by toggling the switch in the top right corner
-   - Click "Load unpacked" and select the directory containing this code
+   - Click "Load unpacked" and select the directory containing this code 
 
-3. Load the extension in Firefox:
+4. Load the extension in Firefox:
    - Open Firefox and navigate to `about:debugging#/runtime/this-firefox`
    - Click "Load Temporary Add-on"
    - Select any file in the extension directory
 
-4. Load the extension in Edge:
+5. Load the extension in Edge:
    - Open Edge and navigate to `edge://extensions/`
    - Enable "Developer mode" by toggling the switch in the left sidebar
    - Click "Load unpacked" and select the directory containing this code
