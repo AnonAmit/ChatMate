@@ -28,7 +28,7 @@ ChatMate uses Google's Gemini API to generate intelligent responses:
 ### Local Development Installation
 
 1. Download and Extract Extension code
-click here --> [Release](https://github.com/AnonAmit/ChatMate/releases/download/v1.3/ChatMate-v1.3.zip)
+    Download code from --> [Release](https://github.com/AnonAmit/ChatMate/releases/download/v1.3/ChatMate-v1.3.zip)
 
 3. Load the extension in Chrome:
    - Open Chrome and navigate to `chrome://extensions/`
