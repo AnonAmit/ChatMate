@@ -1,8 +1,7 @@
 # ChatMate Extension
+ChatMate is a browser extension that provides personalized, context-aware, and dynamic chat recommendations in Hinglish (a mix of Hindi and English) for social media platforms like Instagram and Facebook.
 
 ![Chatemate ui Screenshot](https://github.com/AnonAmit/ChatMate/blob/main/image.png)
-
-ChatMate is a browser extension that provides personalized, context-aware, and dynamic chat recommendations in Hinglish (a mix of Hindi and English) for social media platforms like Instagram and Facebook.
 
 ## Features
 
